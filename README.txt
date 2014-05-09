@@ -1,4 +1,4 @@
-Panopoly Search
+hotsauce Search
 ===============
 Indexes and searches site content making it available to both Solr and DB search indexes
 

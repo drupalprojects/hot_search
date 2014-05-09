@@ -1,17 +1,17 @@
 <?php
 /**
  * @file
- * panopoly_search.views_default.inc
+ * hot_search.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function panopoly_search_views_default_views() {
+function hot_search_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'panopoly_database_search';
+  $view->name = 'hotsauce_database_search';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'search_api_index_database_node_index';
@@ -41,7 +41,7 @@ function panopoly_search_views_default_views() {
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['label'] = 'Empty Text';
   $handler->display->display_options['empty']['area']['content'] = 'Your search did not return any results.';
-  $handler->display->display_options['empty']['area']['format'] = 'panopoly_html_text';
+  $handler->display->display_options['empty']['area']['format'] = 'hotsauce_html_text';
   /* Field: Image */
   $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
   $handler->display->display_options['fields']['field_featured_image']['table'] = 'search_api_index_database_node_index';
@@ -51,7 +51,7 @@ function panopoly_search_views_default_views() {
   $handler->display->display_options['fields']['field_featured_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
-    'image_style' => 'panopoly_image_quarter',
+    'image_style' => 'hotsauce_image_quarter',
     'image_link' => 'content',
   );
   /* Field: Title */
@@ -120,14 +120,14 @@ function panopoly_search_views_default_views() {
       'label' => 'Search: Fulltext search',
     ),
   );
-  $export['panopoly_database_search'] = $view;
+  $export['hotsauce_database_search'] = $view;
 
   $view = new view();
-  $view->name = 'panopoly_search';
+  $view->name = 'hot_search';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'search_api_index_node_index';
-  $view->human_name = 'Panopoly Solr Search';
+  $view->human_name = 'hotsauce Solr Search';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -153,7 +153,7 @@ function panopoly_search_views_default_views() {
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['label'] = 'Empty Text';
   $handler->display->display_options['empty']['area']['content'] = 'Your search did not return any results.';
-  $handler->display->display_options['empty']['area']['format'] = 'panopoly_html_text';
+  $handler->display->display_options['empty']['area']['format'] = 'hotsauce_html_text';
   /* Field: Image */
   $handler->display->display_options['fields']['field_featured_image']['id'] = 'field_featured_image';
   $handler->display->display_options['fields']['field_featured_image']['table'] = 'search_api_index_node_index';
@@ -164,7 +164,7 @@ function panopoly_search_views_default_views() {
   $handler->display->display_options['fields']['field_featured_image']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_featured_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_featured_image']['settings'] = array(
-    'image_style' => 'panopoly_image_quarter',
+    'image_style' => 'hotsauce_image_quarter',
     'image_link' => 'content',
   );
   /* Field: Title */
@@ -233,7 +233,7 @@ function panopoly_search_views_default_views() {
       'label' => 'Search: Fulltext search',
     ),
   );
-  $export['panopoly_search'] = $view;
+  $export['hot_search'] = $view;
 
   return $export;
 }

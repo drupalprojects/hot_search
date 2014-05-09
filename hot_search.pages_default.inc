@@ -1,17 +1,17 @@
 <?php
 /**
  * @file
- * panopoly_search.pages_default.inc
+ * hot_search.pages_default.inc
  */
 
 /**
  * Implements hook_default_page_manager_pages().
  */
-function panopoly_search_default_page_manager_pages() {
+function hot_search_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
-  $page->name = 'panopoly_search';
+  $page->name = 'hot_search';
   $page->task = 'page';
   $page->admin_title = 'Search Page';
   $page->admin_description = '';
@@ -49,9 +49,9 @@ function panopoly_search_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_panopoly_search_panel_context';
+  $handler->name = 'page_hot_search_panel_context';
   $handler->task = 'page';
-  $handler->subtask = 'panopoly_search';
+  $handler->subtask = 'hot_search';
   $handler->handler = 'panel_context';
   $handler->weight = -30;
   $handler->conf = array(
@@ -156,7 +156,7 @@ function panopoly_search_default_page_manager_pages() {
     $pane->pid = 'new-25ec26bf-8e25-4163-bf5c-406fed80259d';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
-    $pane->subtype = 'panopoly_search-search_solr_results';
+    $pane->subtype = 'hot_search-search_solr_results';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -209,9 +209,9 @@ function panopoly_search_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_panopoly_search_panel_context_3';
+  $handler->name = 'page_hot_search_panel_context_3';
   $handler->task = 'page';
-  $handler->subtask = 'panopoly_search';
+  $handler->subtask = 'hot_search';
   $handler->handler = 'panel_context';
   $handler->weight = -29;
   $handler->conf = array(
@@ -307,7 +307,7 @@ function panopoly_search_default_page_manager_pages() {
     $pane->pid = 'new-6e68b43e-ac55-4417-9705-64e3c639c681';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
-    $pane->subtype = 'panopoly_database_search-search_database_results';
+    $pane->subtype = 'hotsauce_database_search-search_database_results';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -370,7 +370,7 @@ function panopoly_search_default_page_manager_pages() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
-  $pages['panopoly_search'] = $page;
+  $pages['hot_search'] = $page;
 
   return $pages;
 

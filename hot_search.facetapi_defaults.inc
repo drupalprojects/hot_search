@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * panopoly_search.facetapi_defaults.inc
+ * hot_search.facetapi_defaults.inc
  */
 
 /**
  * Implements hook_facetapi_default_facet_settings().
  */
-function panopoly_search_facetapi_default_facet_settings() {
+function hot_search_facetapi_default_facet_settings() {
   $export = array();
 
   $facet = new stdClass();
@@ -80,7 +80,7 @@ function panopoly_search_facetapi_default_facet_settings() {
     'show_expanded' => 0,
     'empty_text' => array(
       'value' => '',
-      'format' => 'panopoly_wysiwyg_text',
+      'format' => 'hotsauce_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
   );
@@ -292,7 +292,7 @@ function panopoly_search_facetapi_default_facet_settings() {
     'show_expanded' => 0,
     'empty_text' => array(
       'value' => '',
-      'format' => 'panopoly_wysiwyg_text',
+      'format' => 'hotsauce_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
   );
@@ -504,7 +504,7 @@ function panopoly_search_facetapi_default_facet_settings() {
     'show_expanded' => 0,
     'empty_text' => array(
       'value' => '',
-      'format' => 'panopoly_wysiwyg_text',
+      'format' => 'hotsauce_wysiwyg_text',
     ),
     'submit_realm' => 'Save and go back to realm settings',
   );

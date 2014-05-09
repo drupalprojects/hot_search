@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * panopoly_search.features.inc
+ * hot_search.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function panopoly_search_ctools_plugin_api() {
+function hot_search_ctools_plugin_api() {
   list($module, $api) = func_get_args();
   if ($module == "facetapi" && $api == "facetapi_defaults") {
     return array("version" => "1");
@@ -25,14 +25,14 @@ function panopoly_search_ctools_plugin_api() {
 /**
  * Implements hook_views_api().
  */
-function panopoly_search_views_api() {
+function hot_search_views_api() {
   return array("api" => "3.0");
 }
 
 /**
  * Implements hook_default_search_api_index().
  */
-function panopoly_search_default_search_api_index() {
+function hot_search_default_search_api_index() {
   $items = array();
   $items['database_node_index'] = entity_import('search_api_index', '{
     "name" : "Database Node Index",
@@ -189,7 +189,7 @@ function panopoly_search_default_search_api_index() {
 /**
  * Implements hook_default_search_api_server().
  */
-function panopoly_search_default_search_api_server() {
+function hot_search_default_search_api_server() {
   $items = array();
   $items['database_server'] = entity_import('search_api_server', '{
     "name" : "Database Server",

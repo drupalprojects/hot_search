@@ -12,11 +12,11 @@ $plugin = array(
   'category' => t('Search'),
   'content_types' => 'facet',
   'render last' => TRUE,
-  'render callback' => 'panopoly_search_facet_content_type_render',
-  'edit form' => 'panopoly_search_facet_content_type_edit_form',
+  'render callback' => 'hot_search_facet_content_type_render',
+  'edit form' => 'hot_search_facet_content_type_edit_form',
 );
 
-function panopoly_search_facet_content_type_edit_form($form, &$form_state) {
+function hot_search_facet_content_type_edit_form($form, &$form_state) {
 
   // Determine what deltas Facet API Supports
   $map = facetapi_get_delta_map();
@@ -55,11 +55,11 @@ function panopoly_search_facet_content_type_edit_form($form, &$form_state) {
   return $form;
 }
 
-function panopoly_search_facet_content_type_edit_form_submit($form, &$form_state) {
+function hot_search_facet_content_type_edit_form_submit($form, &$form_state) {
   $form_state['conf']['delta'] = $form_state['values']['delta'];
 }
 
-function panopoly_search_facet_content_type_render($subtype, $conf, $args, $context) {
+function hot_search_facet_content_type_render($subtype, $conf, $args, $context) {
 
   // Assemble some important information
   $builds = &drupal_static(__FUNCTION__, array());

@@ -1,4 +1,4 @@
-; Panopoly Search Makefile
+; hotsauce Search Makefile
 
 api = 2
 core = 7.x
